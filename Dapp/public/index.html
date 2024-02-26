@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Coupon System</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+   
+    <script src="https://cdn.jsdelivr.net/npm/web3/dist/web3.min.js"></script>
+
+    <script src="https://cdn.ethers.io/lib/ethers-5.2.umd.min.js"
+    type="application/javascript"></script>
+
+
+
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        .container { margin-top: 20px; }
+    </style>
+</head>
+<body>
+    <h1>Coupon System</h1>
+    <div class="container">
+        <div>
+            <h2>Create Single Coupon</h2>
+            <label for="singleCouponCode">Coupon Code:</label>
+            <input type="text" id="singleCouponCode" required>
+            <label for="singleCouponValue">Coupon Value (in USDT):</label>
+            <input type="number" id="singleCouponValue" required>
+            <button id="createSingleCoupon">Create Coupon</button>
+        </div>
+        <div>
+            <h2>Redeem Coupon</h2>
+            <label for="redeemCouponCode">Coupon Code:</label>
+            <input type="text" id="redeemCouponCode" required>
+            <button id="redeemCoupon">Redeem Coupon</button>
+        </div>
+
+        <div>
+            <h2>Create Multiple Coupons</h2>
+            <label for="multipleCouponCodes">Coupon Codes (one per line):</label>
+            <textarea id="multipleCouponCodes" rows="5" required></textarea>
+            <label for="multipleCouponValue">Coupon Value for All (in USDT):</label>
+            <input type="number" id="multipleCouponValue" required>
+            <button id="createMultipleCoupons">Create Multiple Coupons</button>
+        </div>
+        
+
+
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

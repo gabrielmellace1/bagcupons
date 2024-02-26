@@ -1,0 +1,29 @@
+specVersion: 1.0.0
+indexerHints:
+  prune: auto
+schema:
+  file: ./schema.graphql
+dataSources:
+  - kind: ethereum
+    name: CouponSystem
+    network: matic
+    source:
+      address: "0x412B59C22815b8e4Cf2E1e89fc1b8E4E87B8151b"
+      abi: CouponSystem
+      startBlock: 53988171
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.7
+      language: wasm/assemblyscript
+      entities:
+        - Coupon
+        - CouponRedemption
+      abis:
+        - name: CouponSystem
+          file: ./abis/CouponSystem.json
+      eventHandlers:
+        - event: CouponCreated(address,bytes32,uint256)
+          handler: handleCouponCreated
+        - event: CouponRedeemed(address,bytes32,uint256)
+          handler: handleCouponRedeemed
+      file: ./src/mappings.ts

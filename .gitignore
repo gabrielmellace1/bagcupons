@@ -1,0 +1,19 @@
+# Ignore node_modules directory
+/dapp/node_modules/
+
+# Ignore build artifacts
+/dapp/build/
+/graph/build/
+/graph/generated/
+/graph/node_modules/
+
+# Ignore local environment files
+/dapp/.env
+/graph/.env
+
+# Ignore compiled smart contract artifacts
+/contract/build/
+
+# Ignore editor-specific files
+.vscode/
+.idea/

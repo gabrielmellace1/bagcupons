@@ -1,0 +1,26 @@
+type Coupon @entity {
+  id: ID!
+  couponHash: String!
+  value: BigInt!
+  redeemed: Boolean!
+  createdAt: BigInt!
+  createdBy: String!
+  redeemedBy: String
+  createdHash: String!
+
+}
+
+type CouponRedemption @entity {
+  id: ID!
+  redemptionId: Int!
+  coupon: String!
+  valueRedeemed: BigInt!
+  redeemedAt: BigInt!
+  redeemedBy: String!
+  redeemedHash: String!
+}
+
+type LatestRedemptionId @entity {
+  id: ID!
+  value: Int!
+}
